@@ -1,0 +1,59 @@
+/* modules/01_top/_loading.scss
+-------------------------------------------------- */
+@use "../../setting/import" as *;
+
+body.is-hidden {
+  overflow: hidden;
+}
+#main {
+  opacity: 0;
+}
+.m-top-loading {
+  & {
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    &__circle {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      &::before {
+        content: "";
+        @include svg;
+        mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2220%22%20height%3D%2219%22%20viewBox%3D%220%200%2020%2019%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10%2018.7128L8.55%2017.3667C3.4%2012.6044%200%209.46348%200%205.60874C0%202.46785%202.42%200%205.5%200C7.24%200%208.91%200.826015%2010%202.13132C11.09%200.826015%2012.76%200%2014.5%200C17.58%200%2020%202.46785%2020%205.60874C20%209.46348%2016.6%2012.6044%2011.45%2017.3769L10%2018.7128Z%22%20fill%3D%22%23C7A24C%22%2F%3E%3C%2Fsvg%3E");
+        background-color: color(accent);
+        position: absolute;
+        inset: 0;
+        margin: auto;
+      }
+      svg {
+        overflow: visible;
+      }
+      path {
+        fill: none;
+      }
+      text {
+        fill: color(font);
+        letter-spacing: 0.07em;
+      }
+    }
+  }
+
+  @include pc {
+    &__circle {
+      width: 100px;
+      height: 100px;
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+      text {
+        font-size: 16px;
+      }
+    }
+  }
+}

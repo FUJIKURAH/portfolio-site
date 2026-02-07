@@ -1,0 +1,35 @@
+/* modules/01_top/_works.scss
+-------------------------------------------------- */
+@use "../../setting/import" as *;
+
+.m-top-works {
+  & {
+    &__wrapper {
+      background-color: color(font, thin);
+      position: relative;
+      z-index: 5;
+    }
+    &__ttl {
+      color: color(base);
+      font-weight: 700;
+    }
+    &__list {
+    }
+  }
+
+  @include pc {
+    &__wrapper {
+      padding: vw(56px, $pc) vw(80px, $pc) vw(108px, $pc);
+      border-radius: vw(80px, $pc) vw(80px, $pc) 0 0;
+    }
+    &__ttl {
+      font-size: vw(56px, $pc);
+      margin-bottom: vw(40px, $pc);
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: vw(40px, $pc) vw(32px, $pc);
+    }
+  }
+}

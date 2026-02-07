@@ -1,0 +1,53 @@
+/* modules/01_top/_skill.scss
+-------------------------------------------------- */
+@use "../../setting/import" as *;
+
+.m-top-skill {
+  & {
+    &__ttl {
+      color: color(base);
+      font-weight: 700;
+    }
+    &__list {
+      li {
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-weight: 700;
+        }
+        img {
+        }
+      }
+    }
+  }
+
+  @include pc {
+    margin-top: vw(158px, $pc);
+    &__ttl {
+      font-size: vw(56px, $pc);
+      margin-bottom: vw(40px, $pc);
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: vw(24px, $pc);
+      li {
+        border-radius: vw(22px, $pc);
+        height: vw(187px, $pc);
+        min-width: vw(187px, $pc);
+        padding: 0 vw(32px, $pc);
+        gap: vw(16px, $pc) 0;
+        span {
+          font-size: vw(32px, $pc);
+        }
+        img {
+          width: vw(50px, $pc);
+          height: auto;
+        }
+      }
+    }
+  }
+}

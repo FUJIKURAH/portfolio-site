@@ -1,0 +1,188 @@
+/* setting/_base.scss
+-------------------------------------------------- */
+@use "import" as *;
+
+* {
+  min-height: 0vw;
+}
+
+html,
+body {
+  font-family: $f-base;
+  font-weight: $regular;
+  font-size: $f-size + px;
+  color: color(bk);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: justify;
+  vertical-align: middle;
+}
+
+body.g-english {
+  text-align: left;
+}
+
+body {
+  line-height: 1;
+  position: relative;
+  background-color: color(base);
+
+  * {
+    letter-spacing: inherit;
+  }
+
+  &::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+    display: block;
+    background: color(bk);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    content: "";
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+img,
+svg {
+  vertical-align: bottom;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// input[type="text"],
+// input[type="email"],
+// input[type="url"],
+// input[type="tel"],
+// input[type="search"],
+// input[type="submit"],
+// input[type="reset"],
+// textarea,
+// button,
+// select {
+//   font-family: $f-base;
+//   font-size: $f-size+px;
+//   color: inherit;
+//   border: none;
+//   outline: none;
+//   border-radius: 0;
+//   appearance: none;
+//   background: none;
+// }
+
+// input[type="radio"],
+// input[type="checkbox"] {
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   outline: none;
+//   border-radius: 0;
+//   background: transparent;
+//   appearance: none;
+// }
+
+input[type="submit"],
+input[type="reset"],
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+[data-hidden] {
+  @include hidden;
+}
+
+a {
+  &[href=""] {
+    pointer-events: none;
+  }
+}
+
+:root {
+  --leading-trim: calc((1em - 1lh) / 2);
+
+  @supports not (top: 1lh) {
+    --leading-trim: 0px;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.js-ttl-fadeup {
+  overflow: hidden;
+  span {
+    display: inline-block;
+    transform: translateY(100%);
+  }
+}
+
+@include pc {
+  a {
+    &[href^="tel"] {
+      pointer-events: none;
+    }
+  }
+
+  [data-device="sp"] {
+    display: none !important;
+  }
+
+  .js-ttl-fadeup {
+    padding-bottom: vw(6px, $pc);
+  }
+}
+
+@include sp {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  [data-device="pc"] {
+    display: none !important;
+  }
+}

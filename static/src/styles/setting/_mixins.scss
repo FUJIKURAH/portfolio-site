@@ -1,0 +1,125 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Mixins
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@use "var" as *;
+@use "functions" as *;
+
+@mixin pc {
+  @media screen and (min-width: #{$break+1}px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: #{$break}px) {
+    @content;
+  }
+}
+
+@mixin hidden {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  text-indent: -9999px;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@mixin svg {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: contain;
+}
+
+// アスペクト比
+@mixin aspect($width, $height, $ofi: cover) {
+  position: relative;
+
+  &::before {
+    float: left;
+    padding-top: calc($height / $width * 100%);
+    content: "";
+  }
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  & > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: $ofi;
+  }
+}
+
+@mixin clamp($count: 3) {
+  @if $count==1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    width: 100%;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+    text-align: left;
+    overflow: hidden;
+  }
+}
+
+@mixin icon($bg, $color, $w, $h) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $bold;
+  background-color: $bg;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 0;
+  color: transparent;
+  box-sizing: border-box;
+  &::after {
+    color: $color;
+  }
+  @include pc {
+    width: vw($w, $pc);
+    height: vw($h, $pc);
+    &:hover {
+      background-color: $color;
+      &::after {
+        color: $bg;
+      }
+    }
+  }
+}
+
+@mixin hoverAnime($color) {
+  @include pc {
+    & > * {
+      overflow: hidden;
+      color: transparent;
+      text-shadow: 0 -1.5rem 0 $color, 0 0 0 $color;
+      transition: text-shadow 0.3s;
+    }
+    &:hover {
+      & > * {
+        text-shadow: 0 0 0 $color, 0 1.5rem 0 $color;
+      }
+    }
+  }
+  @include sp {
+    & > * {
+      color: $color;
+    }
+  }
+}

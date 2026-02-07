@@ -1,0 +1,23 @@
+// ==================================================
+// _Setting
+// ==================================================
+@use "setting/reset";
+@use "setting/base";
+
+// ==================================================
+// _Modules
+// ==================================================
+// 00：ページ共通
+@use "modules/00_common/btn" as m-btn;
+
+// 01：TOPページ
+@use "modules/01_top/loading" as m-top-loading;
+@use "modules/01_top/fv" as m-top-fv;
+@use "modules/01_top/mv" as m-top-mv;
+@use "modules/01_top/works" as m-top-works;
+@use "modules/01_top/works-item" as m-top-works-item;
+@use "modules/01_top/skill" as m-top-skill;
+@use "modules/01_top/about" as m-top-about;
+
+// 02：WORKS
+@use "modules/02_works/works" as m-works;

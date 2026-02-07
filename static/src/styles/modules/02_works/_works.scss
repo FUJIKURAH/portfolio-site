@@ -1,0 +1,113 @@
+/* modules/02_work/_works.scss
+-------------------------------------------------- */
+@use "../../setting/import" as *;
+
+.m-works {
+  & {
+    &__ttl {
+      font-weight: 700;
+    }
+    &__url {
+      span {
+        display: block;
+        font-weight: 700;
+      }
+      a {
+        text-decoration: underline;
+        color: color(font);
+      }
+    }
+    &__art {
+      h2 {
+        font-weight: 700;
+      }
+      h3 {
+        font-weight: 700;
+      }
+      figure {
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        font-family: $f-noto;
+        line-height: 1.5;
+        color: color(font, thin);
+        a {
+          color: color(font, thin);
+          text-decoration: underline;
+        }
+      }
+    }
+    &__back {
+      text-align: center;
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px;
+        background-color: color(font);
+        @include hoverAnime(color(base));
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @include pc {
+    padding: vw(160px, $pc) vw(80px, $pc);
+    max-width: vw(1240px, $pc);
+    margin: 0 auto;
+    &__ttl {
+      font-size: vw(64px, $pc);
+      margin-bottom: vw(40px, $pc);
+      small {
+        font-size: vw(48px, $pc);
+      }
+    }
+    &__url {
+      span {
+        font-size: vw(24px, $pc);
+        margin-bottom: vw(10px, $pc);
+      }
+      a {
+        font-size: vw(24px, $pc);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &__art {
+      h2 {
+        font-size: vw(48px, $pc);
+        margin: vw(80px, $pc) 0 vw(20px, $pc);
+      }
+      h3 {
+        font-size: vw(24px, $pc);
+        margin: vw(80px, $pc) 0 vw(20px, $pc);
+      }
+      figure {
+        margin: vw(80px, $pc) 0;
+      }
+      p {
+        font-size: vw(24px, $pc);
+        margin: 1rem 0;
+        a {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &__back {
+      margin-top: vw(80px, $pc);
+      a {
+        padding: vw(24px, $pc) vw(48px, $pc);
+        span {
+          font-size: vw(20px, $pc);
+        }
+      }
+    }
+  }
+}

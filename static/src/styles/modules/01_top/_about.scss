@@ -1,0 +1,124 @@
+/* modules/01_top/_about.scss
+-------------------------------------------------- */
+@use "../../setting/import" as *;
+
+.m-top-about {
+  & {
+    position: relative;
+    overflow: hidden;
+    &__ttl {
+      font-weight: 700;
+    }
+
+    &__txt {
+      font-family: $f-noto;
+      color: color(font, thin);
+      line-height: 1.5;
+    }
+
+    &__img {
+      border-radius: 50%;
+      background-color: color(wt);
+      aspect-ratio: 1/1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__loop {
+      position: absolute;
+      svg {
+        display: block;
+        overflow: visible;
+        position: relative;
+        z-index: 1;
+      }
+      .svg-track-wrap {
+        position: relative;
+        overflow: hidden;
+      }
+      .looptext-track--svg {
+        bottom: 0;
+        .looptext {
+          color: color(font, thin);
+        }
+      }
+      .looptext-track--default {
+        bottom: 0;
+        .looptext {
+          color: color(wt);
+        }
+      }
+      .looptext-track {
+        position: absolute;
+        display: flex;
+        width: max-content;
+        animation: looptext 30s linear infinite;
+      }
+      .looptext {
+        white-space: nowrap;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1;
+      }
+    }
+  }
+
+  @include pc {
+    &__wrapper {
+      padding: vw(65px, $pc) vw(80px, $pc);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__txts {
+      width: vw(625px, $pc);
+    }
+
+    &__ttl {
+      font-size: vw(56px, $pc);
+    }
+
+    &__txt {
+      margin-top: vw(40px, $pc);
+      font-size: vw(24px, $pc);
+    }
+
+    &__img {
+      width: 450px;
+      img {
+        width: 205px;
+        height: auto;
+      }
+    }
+
+    &__loop {
+      top: vw(65px, $pc);
+      right: vw(80px, $pc);
+      svg.aboutCircle {
+        width: 450px;
+        aspect-ratio: 1/1;
+      }
+      .svg-track-wrap {
+        width: 100%;
+        height: 100%;
+      }
+      .looptext-track {
+        bottom: vw(-45px, $pc);
+      }
+      .looptext {
+        font-size: 128px;
+      }
+    }
+  }
+}
+
+@keyframes looptext {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>冷蔵庫管理サイト(ver 1.0)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="m-works">
+        <h1 class="m-works__ttl">冷蔵庫管理サイト<small>(ver 1.0)</small></h1>
+        <p class="m-works__url">
+          <span>- URL</span>
+          <a
+            href="https://fridge-manager-portfolio.netlify.app/"
+            target="_blank"
+            >https://fridge-manager-portfolio.netlify.app/</a
+          >
+        </p>
+        <article class="m-works__art">
+          <figure><img src="../img/works/thumb01.jpg" alt="" /></figure>
+          <h2>概要</h2>
+          <p>
+            冷蔵庫の中身を管理するWebサイトです。<br />登録した食材の情報をもとに、一覧表示や管理ができるようになっています。
+          </p>
+          <h2>使用技術</h2>
+          <p>JavaScript（Vanilla JS）<br />HTML / CSS<br />Vite</p>
+          <h2>担当範囲</h2>
+          <p>
+            バックエンド（DB設計・API実装）は別エンジニアが担当し、フロントエンド全般（UI実装・API通信・画面設計）を担当しました。
+          </p>
+          <p>
+            API通信を行い、取得したデータをもとに画面表示を動的に切り替える処理や、
+            静的なUIの構築を行っています。
+          </p>
+          <h2>工夫した点・取り組み</h2>
+          <p>
+            MVCの考え方をベースに、機能ごとに責務を分けた構成を意識して設計しました。
+          </p>
+          <p>
+            API通信を使ったUI構築の経験が少なかったため、参考書やドキュメントを読みながら設計と実装を進めています。
+            将来的にフロントエンドフレームワークで作り直すことを前提に、まずは普段から使っているJavaScript（Vanilla
+            JS）で処理の流れや設計の考え方を理解することを目的として開発しました。
+          </p>
+          <p>
+            また、バックエンドエンジニアとの連携にも力を入れました。
+            専門領域が異なるため、当初は仕様や意図の共有が難しい場面もありましたが、設計に必要な情報をスプレッドシートにまとめて可視化することで、認識のズレを減らし、円滑に連携できるよう工夫しました。
+          </p>
+          <p>
+            UI面では、冗長な説明を減らし、直感的に使い方が分かることを意識しています。
+            イラストやアイコン、配色を活用し、視覚的に理解しやすいデザインを心がけました。
+          </p>
+          <h3>- GitHub</h3>
+          <p>
+            <a
+              href="https://github.com/watanabehiroyuki/fridge-manager/tree/master/frontend"
+              target="_blank"
+              >https://github.com/watanabehiroyuki/fridge-manager</a
+            >
+          </p>
+        </article>
+        <div class="m-works__back">
+          <a href="/"><span>← TOPへ戻る</span></a>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

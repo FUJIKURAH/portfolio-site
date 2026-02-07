@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>冷蔵庫管理サイト(ver 2.0)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="m-works">
+        <h1 class="m-works__ttl">冷蔵庫管理サイト<small>(ver 2.0)</small></h1>
+        <p class="m-works__url">
+          <span>- URL</span>
+          <a href="fridge-manager-portfolio.netlify.app/" target="_blank"
+            >fridge-manager-portfolio.netlify.app/</a
+          >
+        </p>
+        <article class="m-works__art">
+          <figure><img src="../img/works/thumb02.jpg" alt="" /></figure>
+          <h2>概要</h2>
+          <p>
+            冷蔵庫の食材を管理するWebアプリケーションのVer2として、既存のVer1をベースに
+            React + TypeScript で再実装を行いました。<br />
+            Ver1で周囲から得たフィードバックをもとにUIを改善し、デザインはFigma
+            Makeを活用してAIと共に再設計しています。
+          </p>
+          <p>
+            Reactでの実装を通じて、従来のJavaScript中心の設計との違いを理解し、コンポーネント設計や状態管理への理解を深めることを目的としました。
+          </p>
+          <h2>使用技術</h2>
+          <p>React<br />TypeScript<br />HTML / CSS<br />Vite</p>
+          <h2>担当範囲</h2>
+          <p>
+            フロントエンド実装を担当しました。<br />
+            バックエンドのデータベース設計はVer1で作成したものを継続利用しています。
+          </p>
+          <h2>工夫した点・取り組み</h2>
+          <p>
+            本プロジェクトはReactの学習を目的としていたため、Ver1の設計やコードを「Reactでどう表現するか」という視点を意識して取り組みました。
+          </p>
+          <p>
+            特に苦労したのは、どの情報をstate（状態）として管理し、どのコンポーネントに責務を持たせるか
+            という設計部分です。<br />
+            従来のJavaScriptによる実装とは異なり、コンポーネント単位で責務を分割する必要があるため、最初は「どこから実装を始めればよいのか」が分からず試行錯誤しました。
+          </p>
+          <p>
+            その中で、以下の点を軸に設計を整理しました。<br />
+            ・画面の変化に関わるデータをstateとして定義する<br />
+            ・stateの管理場所を起点にコンポーネント構造を検討する<br />
+            ・不要な再レンダリングや無駄な処理を減らす設計を意識する
+          </p>
+          <p>
+            AIを活用しながら設計の相談を行い、自分なりに最適な構成を模索しました。<br />
+            まだ改善の余地はあると感じていますが、Reactにおける状態管理と設計思考を大きく学べたプロジェクトになりました。
+          </p>
+          <h3>- GitHub</h3>
+          <p>
+            <a
+              href="https://github.com/FUJIKURAH/fridge-manager_v2"
+              target="_blank"
+              >https://github.com/FUJIKURAH/fridge-manager_v2</a
+            >
+          </p>
+        </article>
+        <div class="m-works__back">
+          <a href="/"><span>← TOPへ戻る</span></a>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

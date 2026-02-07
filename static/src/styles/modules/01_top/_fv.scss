@@ -1,0 +1,153 @@
+/* modules/01_top/_fv.scss
+-------------------------------------------------- */
+@use "../../setting/import" as *;
+
+.m-top-fv {
+  & {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.05rem;
+    position: relative;
+    z-index: 1;
+    &__wrapper {
+      position: relative;
+    }
+    &__role {
+      font-weight: 700;
+      color: color(font, thin);
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        background-color: color(font, thin);
+      }
+    }
+    &__ttl {
+      font-weight: 700;
+      line-height: calc(96 / 72);
+    }
+    &__lead {
+      font-family: $f-noto;
+      color: color(font, thin);
+    }
+    &__nav {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        background-color: color(font);
+        @include hoverAnime(color(base));
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+    &__circle {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      &::before {
+        content: "";
+        @include svg;
+        mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2220%22%20height%3D%2219%22%20viewBox%3D%220%200%2020%2019%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10%2018.7128L8.55%2017.3667C3.4%2012.6044%200%209.46348%200%205.60874C0%202.46785%202.42%200%205.5%200C7.24%200%208.91%200.826015%2010%202.13132C11.09%200.826015%2012.76%200%2014.5%200C17.58%200%2020%202.46785%2020%205.60874C20%209.46348%2016.6%2012.6044%2011.45%2017.3769L10%2018.7128Z%22%20fill%3D%22%23C7A24C%22%2F%3E%3C%2Fsvg%3E");
+        background-color: color(accent);
+        position: absolute;
+        inset: 0;
+        margin: auto;
+      }
+      svg {
+        overflow: visible;
+        animation: rotation 24s linear infinite;
+      }
+      path {
+        fill: none;
+      }
+      text {
+        fill: color(font);
+        letter-spacing: 0.07em;
+      }
+    }
+    &__scroll {
+      color: color(font, thin);
+      font-weight: 700;
+      position: absolute;
+      bottom: 0;
+      writing-mode: vertical-rl;
+      letter-spacing: 0.1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      &::before {
+        content: "";
+        animation: scroll 2.3s infinite;
+        background-color: color(font, thin);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+      }
+    }
+  }
+
+  @include pc {
+    padding: vw(80px, $pc);
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: vw(1280px, $pc);
+      margin: 0 auto;
+    }
+    &__txts {
+      width: vw(525px, $pc);
+    }
+    &__role {
+      font-size: vw(24px, $pc);
+      gap: 0 vw(8px, $pc);
+      &::before {
+        width: vw(20px, $pc);
+        height: vw(2px, $pc);
+      }
+    }
+    &__ttl {
+      font-size: vw(72px, $pc);
+      margin-top: vw(12px, $pc);
+    }
+    &__lead {
+      font-size: vw(24px, $pc);
+      margin-top: vw(16px, $pc);
+    }
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 0 vw(24px, $pc);
+      margin-top: vw(24px, $pc);
+      a {
+        font-size: vw(20px, $pc);
+        padding: vw(24px, $pc) vw(48px, $pc);
+      }
+    }
+    &__circle {
+      width: 100px;
+      height: 100px;
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+      text {
+        font-size: 13px;
+      }
+    }
+    &__scroll {
+      height: vw(120px, $pc);
+      font-size: vw(16px, $pc);
+      padding-left: vw(10px, $pc);
+      &::before {
+        width: vw(2px, $pc);
+      }
+    }
+  }
+}
