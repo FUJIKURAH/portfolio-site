@@ -72,7 +72,8 @@
     &__mee {
       width: vw(440px, $pc);
       height: vw(567px, $pc);
-      background: url("../img/top/mee_bg.svg") center center / contain no-repeat;
+      background: url("../../../img/top/mee_bg.svg") center center / contain
+        no-repeat;
     }
     &__mee-wrapper {
       width: vw(350px, $pc);
