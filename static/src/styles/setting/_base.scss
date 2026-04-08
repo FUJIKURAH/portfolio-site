@@ -6,6 +6,10 @@
   min-height: 0vw;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   font-family: $f-base;
