@@ -153,3 +153,24 @@ document.addEventListener("keydown", (e) => {
     document.body.style.overflow = "";
   }
 });
+
+// スムーススクロール
+const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const href = link.getAttribute("href");
+    const targetSection = document.querySelector(href);
+    const sectionTop = targetSection.getBoundingClientRect().top;
+    const currentPos = window.scrollY;
+    const gap = 0;
+    const target = sectionTop + currentPos - gap;
+
+    window.scrollTo({
+      top: target,
+      behavior: "smooth",
+    });
+  });
+});
