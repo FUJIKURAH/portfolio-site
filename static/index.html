@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,8 +7,10 @@
     <title>ポートフォリオ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="is-hidden">
     <div class="m-top-loading" id="loading">
@@ -17,7 +19,7 @@
           <path id="loading-circle" d="M 0 50 A 50 50 0 1 1 0 51 z" />
           <text>
             <textPath xlink:href="#loading-circle">
-              Loading now. Please wait a moment. 
+              Loading now. Please wait a moment.
             </textPath>
           </text>
         </svg>
@@ -31,48 +33,51 @@
             <h1 class="m-top-fv__ttl">Haru Watanabe<br />Portfolio</h1>
             <p class="m-top-fv__lead">渡邊晴のポートフォリオ</p>
             <nav class="m-top-fv__nav">
-              <a href="#"><span>About Me</span></a>
+              <a class="js-modal-open"><span>About Me</span></a>
               <a href="#"><span>Works</span></a>
             </nav>
           </div>
           <div class="m-top-mv">
             <div class="m-top-mv__wrapper">
-              <svg
-                width="460"
-                height="594"
-                viewBox="0 0 460 594"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="m-top-mv__stroke"
-              >
-                <rect
-                  x="0.448343"
-                  y="0.448343"
-                  width="459.103"
-                  height="592.71"
-                  rx="229.552"
-                  class="line1"
-                />
-                <rect
-                  x="11"
-                  y="14.3032"
-                  width="438"
-                  height="565"
-                  rx="219"
-                  class="line2"
-                />
-              </svg>
-              <div class="m-top-mv__mee">
-                <div class="m-top-mv__mee-wrapper">
-                <video
-                  id="meeVideo"
-                  muted
-                  preload="auto"
-                  loop
-                  width="1920"
-                  height="1080"
+              <div class="m-top-mv__img">
+                <svg
+                  width="460"
+                  height="594"
+                  viewBox="0 0 460 594"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="m-top-mv__stroke"
                 >
-                <source src="img/mee.mp4" type="video/mp4"/>
+                  <rect
+                    x="0.448343"
+                    y="0.448343"
+                    width="459.103"
+                    height="592.71"
+                    rx="229.552"
+                    class="line1"
+                  />
+                  <rect
+                    x="11"
+                    y="14.3032"
+                    width="438"
+                    height="565"
+                    rx="219"
+                    class="line2"
+                  />
+                </svg>
+                <div class="m-top-mv__mee">
+                  <div class="m-top-mv__mee-wrapper">
+                    <video
+                      id="meeVideo"
+                      muted
+                      preload="auto"
+                      loop
+                      width="1920"
+                      height="1080"
+                    >
+                      <source src="img/mee.mp4" type="video/mp4" />
+                    </video>
+                  </div>
                 </div>
               </div>
               <p class="m-top-mv__comment01">This is my Portfolio.</p>
@@ -101,136 +106,201 @@
           <ul class="m-top-works__list">
             <li class="m-top-works-item">
               <p class="m-top-works-item__num">01</p>
-              <p class="m-top-works-item__ttl">冷蔵庫管理サイト<small>(ver 2.0)</small></p>
+              <p class="m-top-works-item__ttl">
+                冷蔵庫管理サイト<small>(ver 2.0)</small>
+              </p>
               <ul class="m-top-works-item__charges">
                 <li>Design</li>
                 <li>Cording</li>
                 <li>Frontend</li>
               </ul>
-              <figure class="m-top-works-item__thumb"><img src="img/works/thumb02.jpg" alt=""></figure>
-              <a href="/works/02.html" class="m-top-works-item__more-link"><span>View more</span></a>
+              <figure class="m-top-works-item__thumb">
+                <img src="img/works/thumb02.jpg" alt="" />
+              </figure>
+              <a href="/works/02.html" class="m-top-works-item__more-link"
+                ><span>View more</span></a
+              >
             </li>
             <li class="m-top-works-item">
               <p class="m-top-works-item__num">02</p>
-              <p class="m-top-works-item__ttl">冷蔵庫管理サイト<small>(ver 2.0)</small></p>
+              <p class="m-top-works-item__ttl">
+                冷蔵庫管理サイト<small>(ver 2.0)</small>
+              </p>
               <ul class="m-top-works-item__charges">
                 <li>Design</li>
                 <li>Cording</li>
                 <li>Frontend</li>
               </ul>
-              <figure class="m-top-works-item__thumb"><img src="img/works/thumb01.jpg" alt=""></figure>
-              <a href="/works/01.html" class="m-top-works-item__more-link"><span>View more</span></a>
+              <figure class="m-top-works-item__thumb">
+                <img src="img/works/thumb01.jpg" alt="" />
+              </figure>
+              <a href="/works/01.html" class="m-top-works-item__more-link"
+                ><span>View more</span></a
+              >
             </li>
           </ul>
           <div class="m-top-skill">
-            <h2 class="m-top-skill__ttl js-ttl-fadeup"><span>My Tools for <br>Building Interfaces</span></h2>
+            <h2 class="m-top-skill__ttl js-ttl-fadeup">
+              <span>My Tools for <br />Building Interfaces</span>
+            </h2>
             <ul class="m-top-skill__list">
               <li>
-                <img src="img/tool/html5.svg" alt="">
+                <img src="img/tool/html5.svg" alt="" />
                 <span>html5</span>
               </li>
               <li>
-                <img src="img/tool/css3.svg" alt="">
+                <img src="img/tool/css3.svg" alt="" />
                 <span>css3</span>
               </li>
               <li>
-                <img src="img/tool/javascript.svg" alt="">
+                <img src="img/tool/javascript.svg" alt="" />
                 <span>Javascript</span>
               </li>
               <li>
-                <img src="img/tool/php.svg" alt="">
+                <img src="img/tool/php.svg" alt="" />
                 <span>PHP</span>
               </li>
               <li>
-                <img src="img/tool/typescript.svg" alt="">
+                <img src="img/tool/typescript.svg" alt="" />
                 <span>Typescript</span>
               </li>
               <li>
-                <img src="img/tool/react.svg" alt="">
+                <img src="img/tool/react.svg" alt="" />
                 <span>React</span>
               </li>
               <li>
-                <img src="img/tool/astro.svg" alt="">
+                <img src="img/tool/astro.svg" alt="" />
                 <span>Astro</span>
               </li>
               <li>
-                <img src="img/tool/wordpress.svg" alt="">
+                <img src="img/tool/wordpress.svg" alt="" />
                 <span>Wordpress</span>
               </li>
               <li>
-                <img src="img/tool/mt.svg" alt="">
+                <img src="img/tool/mt.svg" alt="" />
                 <span>Movable Type</span>
               </li>
               <li>
-                <img src="img/tool/vscord.svg" alt="">
+                <img src="img/tool/vscord.svg" alt="" />
                 <span>Visual Studio Code</span>
               </li>
               <li>
-                <img src="img/tool/vite.svg" alt="">
+                <img src="img/tool/vite.svg" alt="" />
                 <span>Vite</span>
               </li>
               <li>
-                <img src="img/tool/gulp.svg" alt="">
+                <img src="img/tool/gulp.svg" alt="" />
                 <span>Gulp</span>
               </li>
               <li>
-                <img src="img/tool/figma.svg" alt="">
+                <img src="img/tool/figma.svg" alt="" />
                 <span>Figma</span>
               </li>
               <li>
-                <img src="img/tool/xd.svg" alt="">
+                <img src="img/tool/xd.svg" alt="" />
                 <span>Xd</span>
               </li>
               <li>
-                <img src="img/tool/photoshop.svg" alt="">
+                <img src="img/tool/photoshop.svg" alt="" />
                 <span>Photoshop</span>
               </li>
               <li>
-                <img src="img/tool/illustrator.svg" alt="">
+                <img src="img/tool/illustrator.svg" alt="" />
                 <span>Illustrator</span>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="m-top-about">
-        <div class="m-top-about__wrapper">
-          <div class="m-top-about__txts">
-            <h2 class="m-top-about__ttl js-ttl-fadeup"><span>About Me</span></h2>
-            <p class="m-top-about__txt">プロダクトデザイン出身のフロントエンドエンジニア。<br>
-              Web制作会社で約5年、UI実装を中心に経験を積んできました。<br>
-              現在はReactを中心に、フロントエンド領域のスキル拡張に取り組んでいます。</p>
-          </div>
-          <figure class="m-top-about__img"><img src="img/top/me.png" alt="" width="205" height="313"></figure>
-        </div>
-        <!-- アニメーション用 -->
-         <div class="m-top-about__loop">
-          <div class="looptext-track looptext-track--default">
-            <p class="looptext">AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe</p>
-            <p class="looptext">AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe</p>
-          </div>
-          <svg viewBox="0 0 450 450" class="aboutCircle">
-          <defs>
-            <clipPath id="circleClip">
-              <circle cx="225" cy="225" r="225" />
-            </clipPath>
-          </defs>
-          <g clip-path="url(#circleClip)">
-            <foreignObject x="0" y="0" width="450" height="450">
-              <div xmlns="http://www.w3.org/1999/xhtml" class="svg-track-wrap">
-                <div class="looptext-track looptext-track--svg">
-                  <p class="looptext">AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe</p>
-                  <p class="looptext">AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe AboutMe</p>
+      <div class="m-modal" id="modal">
+        <div class="m-modal__overlay js-modal-close"></div>
+        <div class="m-modal__content">
+          <!-- クローズボタン -->
+          <button
+            type="button"
+            class="m-modal__close js-modal-close"
+            aria-label="閉じる"
+          >
+            ×
+          </button>
+          <div class="m-modal__main">
+            <section class="m-top-about">
+              <div class="m-top-about__wrapper">
+                <div class="m-top-about__txts">
+                  <h2 class="m-top-about__ttl">
+                    <span>About Me</span>
+                  </h2>
+                  <p class="m-top-about__txt">
+                    プロダクトデザイン出身のフロントエンドエンジニア。<br />
+                    Web制作会社で約5年、UI実装を中心に経験を積んできました。<br />
+                    現在はReactを中心に、フロントエンド領域のスキル拡張に取り組んでいます。
+                  </p>
+                </div>
+
+                <div class="m-top-about__img-wrap">
+                  <svg
+                    width="460"
+                    height="594"
+                    viewBox="0 0 460 594"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="m-top-about__stroke"
+                  >
+                    <rect
+                      x="0.448343"
+                      y="0.448343"
+                      width="459.103"
+                      height="592.71"
+                      rx="229.552"
+                      class="line1"
+                    />
+                    <rect
+                      x="11"
+                      y="14.3032"
+                      width="438"
+                      height="565"
+                      rx="219"
+                      class="line2"
+                    />
+                  </svg>
+                  <svg
+                    width="440"
+                    height="567"
+                    viewBox="0 0 440 567"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="m-top-about__photo"
+                  >
+                    <defs>
+                      <clipPath id="photoClip">
+                        <rect width="440" height="567" rx="220" />
+                      </clipPath>
+                    </defs>
+                    <!-- 写真 -->
+                    <image
+                      href="img/top/about_ph.jpg"
+                      width="324"
+                      height="310"
+                      preserveAspectRatio="xMidYMid slice"
+                      clip-path="url(#photoClip)"
+                    />
+                    <!-- フレーム（任意） -->
+                    <rect
+                      width="440"
+                      height="567"
+                      rx="220"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </svg>
                 </div>
               </div>
-            </foreignObject>
-          </g>
-        </svg>
-         </div>
-        <!-- /アニメーション用 -->
-      </section>
+            </section>
+          </div>
+        </div>
+      </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script type="module" src="/src/main.js"></script>

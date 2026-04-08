@@ -1,0 +1,51 @@
+/* modules/00_common/_modal.scss
+-------------------------------------------------- */
+@use "../../setting/import" as *;
+
+.m-modal {
+  & {
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.is-open {
+      visibility: visible;
+      opacity: 1;
+    }
+    &__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    &__content {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+      max-height: 90%;
+      padding: vw(60px, $pc) vw(25px, $pc);
+      background: color(base);
+      border-radius: vw(25px, $pc);
+    }
+    &__close {
+      position: absolute;
+      top: vw(15px, $pc);
+      right: vw(25px, $pc);
+      width: vw(25px, $pc);
+      height: vw(25px, $pc);
+      border: none;
+      background: none;
+      font-size: vw(35px, $pc);
+      color: color(font, thin);
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  @include pc {
+  }
+}

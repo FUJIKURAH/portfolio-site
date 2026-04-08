@@ -38,23 +38,9 @@ tl.to("#main", {
   opacity: 1,
   duration: 0.5,
 });
-tl.to(".m-top-mv__stroke .line2", {
-  strokeDashoffset: 0,
-  duration: 2,
-  ease: "linear",
-});
-tl.to(
-  ".m-top-mv__stroke .line1",
-  {
-    strokeDashoffset: 0,
-    duration: 1.9,
-    ease: "linear",
-  },
-  "<+0.1",
-).call(playVideoOnce);
-tl.to(".m-top-mv__mee-wrapper", {
+tl.to(".m-top-mv__img", {
   opacity: 1,
-  duration: 0.5,
+  duration: 1,
   ease: "sine.out",
 }).call(playVideoOnce);
 tl.to(".m-top-mv__comment01", { opacity: 1, x: 0, y: 0, duration: 0.5 });
@@ -142,4 +128,28 @@ gsap.utils.toArray(".js-ttl-fadeup").forEach((el) => {
       start: "top 90%",
     },
   });
+});
+
+// モーダル
+const modal = document.getElementById("modal");
+const openBtn = document.querySelector(".js-modal-open");
+const closeBtns = document.querySelectorAll(".js-modal-close");
+
+openBtn.addEventListener("click", () => {
+  modal.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+});
+
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  });
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
 });

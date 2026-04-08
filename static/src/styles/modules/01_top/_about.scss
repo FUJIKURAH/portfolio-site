@@ -16,109 +16,138 @@
       line-height: 1.5;
     }
 
-    &__img {
-      border-radius: 50%;
-      background-color: color(wt);
-      aspect-ratio: 1/1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__loop {
-      position: absolute;
-      svg {
-        display: block;
-        overflow: visible;
-        position: relative;
-        z-index: 1;
-      }
-      .svg-track-wrap {
-        position: relative;
-        overflow: hidden;
-      }
-      .looptext-track--svg {
-        bottom: 0;
-        .looptext {
-          color: color(font, thin);
-        }
-      }
-      .looptext-track--default {
-        bottom: 0;
-        .looptext {
-          color: color(wt);
-        }
-      }
-      .looptext-track {
-        position: absolute;
-        display: flex;
-        width: max-content;
-        animation: looptext 30s linear infinite;
-      }
-      .looptext {
-        white-space: nowrap;
-        font-weight: bold;
-        margin: 0;
-        line-height: 1;
-      }
-    }
+    // &__loop {
+    //   position: absolute;
+    //   svg {
+    //     display: block;
+    //     overflow: visible;
+    //     position: relative;
+    //     z-index: 1;
+    //   }
+    //   .svg-track-wrap {
+    //     position: relative;
+    //     overflow: hidden;
+    //   }
+    //   .looptext-track--svg {
+    //     bottom: 0;
+    //     .looptext {
+    //       color: color(font, thin);
+    //     }
+    //   }
+    //   .looptext-track--default {
+    //     bottom: 0;
+    //     .looptext {
+    //       color: color(wt);
+    //     }
+    //   }
+    //   .looptext-track {
+    //     position: absolute;
+    //     display: flex;
+    //     width: max-content;
+    //     animation: looptext 30s linear infinite;
+    //   }
+    //   .looptext {
+    //     white-space: nowrap;
+    //     font-weight: bold;
+    //     margin: 0;
+    //     line-height: 1;
+    //   }
+    // }
   }
 
   @include pc {
     &__wrapper {
-      padding: vw(65px, $pc) vw(80px, $pc);
+      padding: vw(15px, $pc) vw(50px, $pc);
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      gap: 0 vw(70px, $pc);
     }
 
     &__txts {
-      width: vw(625px, $pc);
+      width: vw(450px, $pc);
     }
 
     &__ttl {
-      font-size: vw(56px, $pc);
+      font-size: vw(32px, $pc);
     }
 
     &__txt {
-      margin-top: vw(40px, $pc);
-      font-size: vw(24px, $pc);
+      margin-top: vw(20px, $pc);
+      font-size: vw(16px, $pc);
     }
 
-    &__img {
-      width: 450px;
-      img {
-        width: 205px;
-        height: auto;
+    &__img-wrap {
+      width: vw(200px, $pc);
+      height: vw(258px, $pc);
+      position: relative;
+    }
+    &__stroke {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      .line1,
+      .line2 {
+        stroke: #5e5e5e;
+        fill: none;
+      }
+      .line1 {
+        stroke-width: vw(0.8px, $pc);
+      }
+      .line2 {
+        stroke-width: vw(2px, $pc);
       }
     }
-
-    &__loop {
-      top: vw(65px, $pc);
-      right: vw(80px, $pc);
-      svg.aboutCircle {
-        width: 450px;
-        aspect-ratio: 1/1;
-      }
-      .svg-track-wrap {
+    &__photo {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: calc(100% - vw(10px, $pc));
+      height: auto;
+      image {
         width: 100%;
         height: 100%;
-      }
-      .looptext-track {
-        bottom: vw(-45px, $pc);
-      }
-      .looptext {
-        font-size: 128px;
+        object-fit: cover;
       }
     }
+    // &__img {
+    //   position: absolute;
+    //   inset: 0;
+    //   margin: auto;
+    //   width: vw(200px, $pc);
+    //   height: vw(258px, $pc);
+    //   img {
+    //     object-fit: cover;
+    //   }
+    // }
+
+    // &__loop {
+    //   top: vw(65px, $pc);
+    //   right: vw(80px, $pc);
+    //   svg.aboutCircle {
+    //     width: 450px;
+    //     aspect-ratio: 1/1;
+    //   }
+    //   .svg-track-wrap {
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    //   .looptext-track {
+    //     bottom: vw(-45px, $pc);
+    //   }
+    //   .looptext {
+    //     font-size: 128px;
+    //   }
+    // }
   }
 }
 
-@keyframes looptext {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
+// @keyframes looptext {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(-50%);
+//   }
+// }

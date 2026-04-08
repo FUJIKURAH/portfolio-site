@@ -9,6 +9,7 @@
 // ==================================================
 // 00：ページ共通
 @use "modules/00_common/btn" as m-btn;
+@use "modules/00_common/modal" as m-modal;
 
 // 01：TOPページ
 @use "modules/01_top/loading" as m-top-loading;
