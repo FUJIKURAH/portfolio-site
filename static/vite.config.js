@@ -12,7 +12,7 @@ const worksFiles = readdirSync(resolve(__dirname, "works"))
   }, {});
 
 export default defineConfig({
-  base: "/portfolio-site/",
+  // base: "/portfolio-site/",
   build: {
     rollupOptions: {
       input: {
