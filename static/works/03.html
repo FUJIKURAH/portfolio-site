@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>冷蔵庫管理サイト(ver 2.0)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="m-works">
+        <h1 class="m-works__ttl">カレンダー</h1>
+        <p class="m-works__url">
+          <span>- URL</span>
+          <a href="https://fujikurah.github.io/calendar/" target="_blank"
+            >https://fujikurah.github.io/calendar/</a
+          >
+        </p>
+        <article class="m-works__art">
+          <figure><img src="../img/works/thumb03.jpg" alt="" /></figure>
+          <h2>概要</h2>
+          <p>
+            TypeScriptでカレンダーを作成しました。<br />
+            初期表示では当月のカレンダーを表示し、前月・翌月の日付は薄いグレーで表示しています。<br />
+            また、カレンダー上部の矢印アイコンをクリックすることで、前月・翌月へ切り替えられるようにしました。
+          </p>
+          <h2>使用技術</h2>
+          <p>TypeScript<br />HTML / CSS</p>
+          <h2>工夫した点・取り組み</h2>
+          <p>
+            TypeScriptの学習を目的として制作しました。<br />
+            JavaScriptでの実装と大きな違いはないと感じましたが、変数や関数の引数・戻り値に型を定義することで、値の扱いをより意識しながら実装できました。<br />
+          </p>
+          <p>
+            特に、前月・翌月の日付の値と表示数を取得するロジックの実装に苦戦しました。<br />
+            カレンダーの1週目・最終週の空きを埋めるため、Dateオブジェクトを用いて月末日や曜日を取得し、必要な日付数を計算して表示しています。
+          </p>
+          <h3>- GitHub</h3>
+          <p>
+            <a href="https://github.com/FUJIKURAH/calendar" target="_blank"
+              >https://github.com/FUJIKURAH/calendar</a
+            >
+          </p>
+        </article>
+        <div class="m-works__back">
+          <a href="/"><span>← TOPへ戻る</span></a>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
