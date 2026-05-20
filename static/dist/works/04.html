@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ストップウォッチ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/main-DnJ6SHkz.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-C_MvVJL4.css">
+  </head>
+  <body>
+    <main>
+      <div class="m-works">
+        <h1 class="m-works__ttl">ストップウォッチ</h1>
+        <p class="m-works__url">
+          <span>- URL</span>
+          <a href="https://fujikurah.github.io/stopwatch/" target="_blank"
+            >https://fujikurah.github.io/stopwatch/</a
+          >
+        </p>
+        <article class="m-works__art">
+          <figure><img src="../img/works/thumb04.jpg" alt="" /></figure>
+          <h2>概要</h2>
+          <p>
+            TypeScriptでストップウォッチを作成しました。<br />
+            右のボタンをクリックすると計測を開始し、再度クリックすると一時停止、さらにクリックすると再開します。左のボタンをクリックすると計測を停止し、表示時間をリセットできる仕様にしています。
+          </p>
+          <h2>使用技術</h2>
+          <p>TypeScript<br />HTML / CSS<br />Vite</p>
+          <h2>工夫した点・取り組み</h2>
+          <p>
+            TypeScriptの学習を目的として制作しました。<br />
+            値が未定義の場合はユニオン型で型定義するなど、型定義の精密さ？を学びました。<br />
+          </p>
+          <p>
+            TypeScriptの学習を目的として制作しました。<br />
+            undefined
+            の可能性がある値にはユニオン型を用いるなど、型安全性を意識した実装を行いました。
+          </p>
+          <p>
+            また、当初は計測時間を「分・秒・ミリ秒」の3つの変数で管理していましたが、処理が複雑になっていたため、計測時間を1つの変数に統一し、表示時に分・秒・ミリ秒へ変換する形へ改善しました。これにより、状態管理をシンプルにしつつ、保守しやすい実装を意識しました。
+          </p>
+          <h3>- GitHub</h3>
+          <p>
+            <a href="https://github.com/FUJIKURAH/stopwatch" target="_blank"
+              >https://github.com/FUJIKURAH/stopwatch</a
+            >
+          </p>
+        </article>
+        <div class="m-works__back">
+          <a href="/"><span>← TOPへ戻る</span></a>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </body>
+</html>
